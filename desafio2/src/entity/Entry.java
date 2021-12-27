@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Objects;
+
 public class Entry {
 
 	private Long id;
@@ -9,14 +11,14 @@ public class Entry {
 	private String amount;
 	private String date;
 	private boolean paid;
-	private long categoryId;
+	private Long categoryId;
 
 	public Entry() {
 		
 	}
 
 	public Entry(Long id, String name, String description, String type, String amount, String date, boolean paid,
-			long categoryId) {
+			Long categoryId) {
 		
 		this.id = id;
 		this.name = name;
@@ -84,11 +86,11 @@ public class Entry {
 		this.paid = paid;
 	}
 
-	public long getCategoryId() {
+	public Long getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCategoryId(long categoryId) {
+	public void setCategoryId(Long categoryId) {
 		this.categoryId = categoryId;
 	}
 
@@ -97,5 +99,23 @@ public class Entry {
 		return "Entry [id=" + id + ", name=" + name + ", description=" + description + ", type=" + type + ", amount="
 				+ amount + ", date=" + date + ", paid=" + paid + ", categoryIg=" + categoryId + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Entry other = (Entry) obj;
+		return Objects.equals(id, other.id);
+	}
+	
 
 }

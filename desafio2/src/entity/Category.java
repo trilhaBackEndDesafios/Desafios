@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Objects;
+
 public class Category {
 
 	private Long id;
@@ -43,7 +45,25 @@ public class Category {
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", description=" + description + "]";
+		return "Category id=" + id + ", name=" + name + ", description=" + description ;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Category other = (Category) obj;
+		return Objects.equals(id, other.id);
+	}
+	
 
 }

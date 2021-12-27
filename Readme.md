@@ -69,14 +69,14 @@ Em suma, pouco importa os detalhes do que aconteceu durante a manutenção do se
 
 #### f) Cite 5 vantagens de POO;
 
-- Confiável:O isolamento entre as partes gera software seguro.Ao alterar uma parte ,nenhuma outra é afetada.
+- Confiável: O isolamento entre as partes gera software seguro.Ao alterar uma parte ,nenhuma outra é afetada.
 
-- Oportuno:aAo dividir tudo em partes,varias delas podem ser desenvolvidas em paralelo.
+- Oportuno: Ao dividir tudo em partes,varias delas podem ser desenvolvidas em paralelo.
 
-- Manutenível:atualizar um software é mais facil,uma pequena modificação vai beneficiar todas as partes que usarem o objeto.
+- Manutenível: atualizar um software é mais facil,uma pequena modificação vai beneficiar todas as partes que usarem o objeto.
 
-- Extensivel:O Software não é estatico.Ele deve crescer para permanecer util.
+- Extensivel: O Software não é estatico.Ele deve crescer para permanecer util.
 
-- Reutilizavel:Podemos usar objetos de um sistema que criamos em outro sistema no futuro.
+- Reutilizavel: Podemos usar objetos de um sistema que criamos em outro sistema no futuro.
 
-- Natural:Mais facil de entender.Preocupa-se mais na funcionalidade do que nos detalhes da implementação.
+- Natural: Mais facil de entender.Preocupa-se mais na funcionalidade do que nos detalhes da implementação.
