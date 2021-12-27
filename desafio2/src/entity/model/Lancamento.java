@@ -96,8 +96,8 @@ public class Lancamento {
 
 	@Override
 	public String toString() {
-		return "Entry [id=" + id + ", name=" + name + ", description=" + description + ", type=" + type + ", amount="
-				+ amount + ", date=" + date + ", paid=" + paid + ", categoryIg=" + categoryId + "]";
+		return "Lancamento  id=" + id + ", name=" + name + ", description=" + description + ", type=" + type + ", amount="
+				+ amount + ", date=" + date + ", paid=" + paid + ", categoryIg=" + categoryId ;
 	}
 
 	@Override
