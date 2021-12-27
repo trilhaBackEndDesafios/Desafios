@@ -1,8 +1,8 @@
-package entity;
+package entity.model;
 
 import java.util.Objects;
 
-public class Entry {
+public class Lancamento {
 
 	private Long id;
 	private String name;
@@ -13,11 +13,11 @@ public class Entry {
 	private boolean paid;
 	private Long categoryId;
 
-	public Entry() {
+	public Lancamento() {
 		
 	}
 
-	public Entry(Long id, String name, String description, String type, String amount, String date, boolean paid,
+	public Lancamento(Long id, String name, String description, String type, String amount, String date, boolean paid,
 			Long categoryId) {
 		
 		this.id = id;
@@ -113,7 +113,7 @@ public class Entry {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Entry other = (Entry) obj;
+		Lancamento other = (Lancamento) obj;
 		return Objects.equals(id, other.id);
 	}
 	

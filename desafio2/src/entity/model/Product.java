@@ -1,4 +1,4 @@
-package entity;
+package entity.model;
 
 import java.util.Objects;
 
@@ -50,12 +50,16 @@ public class Product {
 	}
 
 	public void setPrice(Double price) {
-		this.price = price + 10;
+		this.price = price;
 	}
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", description=" + description + ", price=" + price + "]";
+		return "Product id = " + id + ", name = " + name + ", description = " + description + ", price = " + price ;
+	}
+	public Double addPrice(Double price) {
+		return this.price = (price + 10 ) ;
+		
 	}
 
 	@Override
