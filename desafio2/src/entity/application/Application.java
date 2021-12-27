@@ -1,6 +1,5 @@
 package entity.application;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -62,8 +61,6 @@ public class Application {
 		System.out.println(lancamento.toString());
 		System.out.println();
 
-		
-
 		/* Criando lista de produtos */
 
 		List<Product> listProducts = Arrays.asList(new Product(1L, "Arroz", "Agulinha", product.addPrice(26.00)),
@@ -72,31 +69,21 @@ public class Application {
 				new Product(4L, "Café", "Moido", product.addPrice(16.00)),
 				new Product(5L, "Açucar", "Cristal", product.addPrice(9.00)));
 
-		
-
 		/* Criando segunda lista de produtos mais caros */
 
-		List<Product> listOfExpenciveProducts = new ArrayList<Product>() {
-			{
-				add(new Product(1L, "Carne", "Picanha", product.addPrice(80.00)));
-
-				add(new Product(2L, "Cerveja", "Heineken", product.addPrice(40.00)));
-
-				add(new Product(3L, "Peixe", "Tilapia", product.addPrice(46.00)));
-			}
-		};
+		List<Product> listOfExpenciveProducts = Arrays.asList(new Product(1L, "Carne", "Picanha", 80.00),
+				new Product(2L, "Cerveja", "Heineken", 40.00), new Product(3L, "Peixe", "Tilapia", 46.00));
 
 		System.out.println("Produtos mais caros:");
 		listOfExpenciveProducts.stream().forEach(p -> System.out.println(p));
-		
+
 		System.out.println();
 		System.out.println("Todos os Produtos:");
 
 		List<Product> newList = Stream.concat(listProducts.stream(), listOfExpenciveProducts.stream())
 				.collect(Collectors.toList());
 		newList.stream().forEach(p -> System.out.println(p));
-		
-		
+
 	}
 
 }
