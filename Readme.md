@@ -82,3 +82,19 @@ Em suma, pouco importa os detalhes do que aconteceu durante a manutenção do se
 - Reutilizavel: Podemos usar objetos de um sistema que criamos em outro sistema no futuro.
 
 - Natural: Mais facil de entender.Preocupa-se mais na funcionalidade do que nos detalhes da implementação.
+
+
+## ✔ Desafio 3
+
+### 🏷 Sobre  CONTROLLER
+
+- a) Com suas palavras defina:
+
+I) O que é o protocolo de comunicação HTTP e como ele Funciona;
+
+II) O que é REST, equal é a sua relação com Com Protocolo HTTP;
+
+III) O que é WEB API,e qual sua relação com REST:
+
+- b) Liste todos os métodos de solicitações HTTP utilizados pelo padrão REST e suas respectivas finalidades;
+
