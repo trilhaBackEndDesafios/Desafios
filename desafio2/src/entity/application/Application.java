@@ -76,7 +76,7 @@ public class Application {
 
 		System.out.println("Produtos mais caros:");
 		listOfExpenciveProducts.stream().forEach(p -> System.out.println(p));
-
+		https://www.youtube.com/watch?v=AiIuJqJ0r8A
 		System.out.println();
 		System.out.println("Todos os Produtos:");
 
