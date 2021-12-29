@@ -1,10 +1,10 @@
-package trilha.back.financys;
+package br.com.financeiro;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FinancysApplicationTests {
+class FinancasApplicationTests {
 
 	@Test
 	void contextLoads() {

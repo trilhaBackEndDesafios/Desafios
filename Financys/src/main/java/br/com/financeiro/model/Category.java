@@ -1,9 +1,10 @@
-package model;
+package br.com.financeiro.model;
 
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-
+@Builder
 @Getter
 @Setter
 @EqualsAndHashCode

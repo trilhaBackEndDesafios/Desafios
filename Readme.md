@@ -90,37 +90,44 @@ Em suma, pouco importa os detalhes do que aconteceu durante a manutenção do se
 
 ### a) Com suas palavras defina:
 
-##### - I) O que é o protocolo de comunicação HTTP e como ele Funciona;
+#### - I) O que é o protocolo de comunicação HTTP e como ele Funciona;
+
 Protocolo de requisição e resposta,utilizando os metodos HTTP para comunicação.
 
-##### -  II) O que é REST, equal é a sua relação com Com Protocolo HTTP;
+#### -  II) O que é REST, equal é a sua relação com Com Protocolo HTTP;
 
 Rest é uma especificação que define s forma de comunicação entre componentes de software na web independente da linguagem de programação,um estilo aqrquitetural utilizando os protocolos HTTP seguindo algumas regras CONSTRAINTS.
 
-##### - III) O que é WEB API,e qual sua relação com REST:
+#### - III) O que é WEB API,e qual sua relação com REST:
 
 API REST, também chamada de API RESTful, é uma interface de programação de aplicações (API ou API web) que está em conformidade com as restrições do estilo de arquitetura REST, permitindo a interação com serviços web RESTful.
 
 ### b) Liste todos os métodos de solicitações HTTP utilizados pelo padrão REST e suas respectivas finalidades;
 
-GET
+- GET
 O método GET solicita a representação de um recurso específico. Requisições utilizando o método GET devem retornar apenas dados.
 HEAD
  O método HEAD solicita uma resposta de forma idêntica ao método GET, porém sem conter o corpo da resposta.
-POST
+- POST
 O método POST é utilizado para submeter uma entidade a um recurso específico, frequentemente causando uma mudança no estado do recurso ou efeitos colaterais no servidor.
-PUT
+- PUT
 O método PUT substitui todas as atuais representações do recurso de destino pela carga de dados da requisição.
 
-DELETE
+- DELETE
 O método DELETE remove um recurso específico.
 CONNECT
 O método CONNECT estabelece um túnel para o servidor identificado pelo recurso de destino.
 
-OPTIONS
+- OPTIONS
 O método OPTIONS é usado para descrever as opções de comunicação com o recurso de destino.
-TRACE
+
+- TRACE
 O método TRACE executa um teste de chamada loop-back junto com o caminho para o recurso de destino.
 
-PATCH
+- PATCH
 O método PATCH é utilizado para aplicar modificações parciais em um recurso.
+
+### i) O que é Swagger?
+
+O Swagger é um framework composto por diversas ferramentas que, independente da linguagem, auxilia a descrição, consumo e visualização de serviços de uma API REST. 
+No framework Swagger, existem ferramentas para os seguintes tipos de tarefas a serem realizadas para o completo desenvolvimento da API de um serviço WEB

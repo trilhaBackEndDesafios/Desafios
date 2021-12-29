@@ -1,4 +1,4 @@
-package model;
+package br.com.financeiro.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
