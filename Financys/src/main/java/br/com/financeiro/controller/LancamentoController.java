@@ -3,6 +3,7 @@ package br.com.financeiro.controller;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.financeiro.model.Category;
 import br.com.financeiro.model.Lancamento;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -41,16 +43,12 @@ public class LancamentoController {
 
 	}
 
-	@ApiOperation("Liste os lançamentos ordenados por uma data")
+	@ApiOperation("Liste os lançamentos ordenados por uma datas")
 	@GetMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public List<Lancamento> readLancamento() {
-		sortDates(listLancamento);
-		return listLancamento;
-	}
 
-	private static void sortDates(List<Lancamento> listLancamento) {
-		listLancamento.sort(Comparator.comparing(Lancamento::getDate));
+		return listLancamento.stream().sorted((d1, d2) -> d1.getDate().compareTo(d2.getDate()))
+				.collect(Collectors.toList());
 	}
-
 }
