@@ -14,19 +14,21 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.financeiro.model.Category;
-import br.com.financeiro.model.Lancamento;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
+@Api(tags = "Categorias")
 @RestController
 @RequestMapping("/categories")
-public class FinanceiroController {
+public class CategoriaController {
 
 	private List<Category> listaCategory = new ArrayList<Category>();
-	// private List<Lancamento> lista = new ArrayList<Lancamento>();
-
+	
+	@ApiOperation("Crie objetos do tipo categoria")
 	@PostMapping
 	public ResponseEntity<?> createCategory(@RequestBody Category category) {
-		
-		if ( category != null) {
+
+		if (category != null) {
 
 			listaCategory.add(category);
 
@@ -35,11 +37,13 @@ public class FinanceiroController {
 			ResponseEntity.badRequest().build();
 		}
 
-		return ResponseEntity.ok(listaCategory.lastIndexOf(category) + 1);		
-		
-	}
+		return ResponseEntity.ok(listaCategory.lastIndexOf(category) + 1);
 
+	}
+	
+	@ApiOperation("Liste as categorias")
 	@GetMapping
+	@ResponseStatus(HttpStatus.CREATED)
 	public List<Category> readCategory() {
 
 		return listaCategory.stream().collect(Collectors.toList());
