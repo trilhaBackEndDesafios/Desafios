@@ -1,0 +1,1 @@
+insert into category (description,name)  values ('Futebol','Lazer');
