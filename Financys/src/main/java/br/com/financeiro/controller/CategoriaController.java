@@ -24,7 +24,7 @@ public class CategoriaController {
 
 	private List<Category> listaCategory = new ArrayList<Category>();
 	
-	@ApiOperation("Crie objetos do tipo categoria")
+	@ApiOperation("Criar")
 	@PostMapping
 	public ResponseEntity<?> createCategory(@RequestBody Category category) {
 
@@ -41,7 +41,7 @@ public class CategoriaController {
 
 	}
 	
-	@ApiOperation("Liste as categorias")
+	@ApiOperation("Listar")
 	@GetMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public List<Category> readCategory() {

@@ -26,7 +26,7 @@ public class LancamentoController {
 
 	private List<Lancamento> listLancamento = new ArrayList<Lancamento>();
 
-	@ApiOperation("Crie  objetos do tipo Lancamento")
+	@ApiOperation("Criar")
 	@PostMapping
 	public ResponseEntity<?> createLancamento(@RequestBody Lancamento lancamento) {
 
@@ -43,7 +43,7 @@ public class LancamentoController {
 
 	}
 
-	@ApiOperation("Liste os lançamentos ordenados por uma datas")
+	@ApiOperation("Listar")
 	@GetMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public List<Lancamento> readLancamento() {

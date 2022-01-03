@@ -45,17 +45,8 @@ public class EntryController {
 
 	}
 
-	/*
-	 * @PostMapping
-	 * 
-	 * @ResponseStatus(HttpStatus.CREATED) public Entry create(@RequestBody Entry
-	 * entry) {
-	 * 
-	 * return entryRepository.save(entry); }
-	 */
 
-	@PostMapping
-	@ResponseStatus(HttpStatus.CREATED)
+	@PostMapping	
 	public ResponseEntity<Entry> create(@RequestBody Entry entry) {
 
 		Long categoryId = entry.getCategoryId();
