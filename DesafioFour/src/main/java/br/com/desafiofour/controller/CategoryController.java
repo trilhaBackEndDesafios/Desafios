@@ -19,20 +19,33 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.desafiofour.exception.EntityNotFoundException;
 import br.com.desafiofour.model.Category;
 import br.com.desafiofour.repositoy.CategoryRepository;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
+@Api(tags = "Category")
 @RestController
 @RequestMapping("/categories")
 public class CategoryController {
 
 	@Autowired
 	private CategoryRepository categoryRepository;
-
+	
+	@ApiOperation("Listar")
 	@GetMapping
 	public List<Category> read() {
 
 		return categoryRepository.findAll();
 	}
+	
+	@ApiOperation("Listar por Id")
+	@GetMapping("/{categoryId}")
+	public Category findById(@PathVariable Long categoryId) {
 
+		return listOrFail(categoryId);
+
+	}
+	
+	@ApiOperation("Criar")
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public Category create(@RequestBody Category category) {
@@ -40,14 +53,10 @@ public class CategoryController {
 		return categoryRepository.save(category);
 
 	}
-
-	@GetMapping("/{categoryId}")
-	public Category findById(@PathVariable Long categoryId) {
-
-		return listOrFail(categoryId);
-
-	}
-
+	
+	
+	
+	@ApiOperation("Atualizar")
 	@PutMapping("/{categoryId}")
 	public Category upDate(@PathVariable Long categoryId, @RequestBody Category category) {
 
@@ -58,7 +67,8 @@ public class CategoryController {
 		return categoryRepository.save(categoryAtual);
 
 	}
-
+	
+	@ApiOperation("Excluir")
 	@DeleteMapping("/{categoryId}")
 	public ResponseEntity<Category> delete(@PathVariable Long categoryId) {
 
