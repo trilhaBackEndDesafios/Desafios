@@ -55,7 +55,7 @@ public class EntryController {
 
 		List<Entry> listaPagos = listAll();
 
-		return listaPagos.stream().filter(l -> l.isPaid() == true).collect(Collectors.toList());
+		return listaPagos.stream().filter(lista -> lista.isPaid() == true).collect(Collectors.toList());
 
 	}
 	
@@ -63,9 +63,9 @@ public class EntryController {
 	@GetMapping("/entry/naopagos")
 	public List<Entry> getNotPaid() {
 
-		List<Entry> listaPagos = entryRepository.findAll();
+		List<Entry> listaNaoPagos = entryRepository.findAll();
 
-		return listaPagos.stream().filter(l -> l.isPaid() == false).collect(Collectors.toList());
+		return listaNaoPagos.stream().filter(lista -> lista.isPaid() == false).collect(Collectors.toList());
 
 	}
 	

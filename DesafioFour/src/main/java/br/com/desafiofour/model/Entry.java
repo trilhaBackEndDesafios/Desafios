@@ -19,17 +19,17 @@ public class Entry {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column
+	
 	private String name;
-	@Column
+	
 	private String description;
-	@Column
+	
 	private String type;
-	@Column
+	
 	private String amount;
-	@Column
+	
 	private String date;
-	@Column
+	
 	private boolean paid;
 
 	private Long categoryId;
