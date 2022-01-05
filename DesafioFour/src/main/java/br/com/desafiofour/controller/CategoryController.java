@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.desafiofour.exception.EntityNotFoundException;
 import br.com.desafiofour.model.Category;
 import br.com.desafiofour.repositoy.CategoryRepository;
+import br.com.desafiofour.service.CategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
@@ -29,6 +30,9 @@ public class CategoryController {
 
 	@Autowired
 	private CategoryRepository categoryRepository;
+	
+	@Autowired
+	private CategoryService categoryService;
 	
 	@ApiOperation("Listar")
 	@GetMapping
@@ -41,7 +45,7 @@ public class CategoryController {
 	@GetMapping("/{categoryId}")
 	public Category findById(@PathVariable Long categoryId) {
 
-		return listOrFail(categoryId);
+		return categoryService.listOrFail(categoryId);
 
 	}
 	
@@ -50,7 +54,7 @@ public class CategoryController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Category create(@RequestBody Category category) {
 
-		return categoryRepository.save(category);
+		return categoryService.save(category);
 
 	}
 	
@@ -64,7 +68,7 @@ public class CategoryController {
 
 		BeanUtils.copyProperties(category, categoryAtual, "id");
 
-		return categoryRepository.save(categoryAtual);
+		return categoryService.save(categoryAtual);
 
 	}
 	

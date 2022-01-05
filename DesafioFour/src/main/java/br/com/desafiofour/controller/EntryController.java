@@ -21,6 +21,7 @@ import br.com.desafiofour.model.Category;
 import br.com.desafiofour.model.Entry;
 import br.com.desafiofour.repositoy.CategoryRepository;
 import br.com.desafiofour.repositoy.EntryRepository;
+import br.com.desafiofour.service.EntryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
@@ -33,14 +34,14 @@ public class EntryController {
 	private EntryRepository entryRepository;
 
 	@Autowired
-	private CategoryRepository categoryRepository;
-	
+	private EntryService entryService;
+
 	@ApiOperation("Listar")
 	@GetMapping
 	public List<Entry> listAll() {
 		return entryRepository.findAll();
 	}
-	
+
 	@ApiOperation("Listar por Id")
 	@GetMapping("/{entryId}")
 	public Entry findById(@PathVariable Long entryId) {
@@ -48,7 +49,7 @@ public class EntryController {
 		return listOrFail(entryId);
 
 	}
-	
+
 	@ApiOperation("Lançamentos pagos")
 	@GetMapping("/entry/pagos")
 	public List<Entry> getPaid() {
@@ -58,7 +59,7 @@ public class EntryController {
 		return listaPagos.stream().filter(lista -> lista.isPaid() == true).collect(Collectors.toList());
 
 	}
-	
+
 	@ApiOperation("Lançamentos não pagos")
 	@GetMapping("/entry/naopagos")
 	public List<Entry> getNotPaid() {
@@ -68,14 +69,14 @@ public class EntryController {
 		return listaNaoPagos.stream().filter(lista -> lista.isPaid() == false).collect(Collectors.toList());
 
 	}
-	
+
 	@ApiOperation("Criar")
 	@PostMapping
 	public ResponseEntity<Entry> create(@RequestBody Entry entry) {
 
-		Optional<Category> category = categoryRepository.findById(entry.getCategoryId());
+		boolean categoryId = entryService.validateCategoryById(entry.getCategoryId());
 
-		if (category.isPresent()) {
+		if (categoryId == true) {
 
 			Entry entrySave = entryRepository.save(entry);
 
@@ -85,7 +86,7 @@ public class EntryController {
 			return ResponseEntity.notFound().build();
 		}
 	}
-	
+
 	@ApiOperation("Atualizar")
 	@PutMapping("/{entryId}")
 	public Entry upDate(@PathVariable Long entryId, @RequestBody Entry entry) {

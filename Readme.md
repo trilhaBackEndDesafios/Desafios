@@ -90,15 +90,15 @@ Em suma, pouco importa os detalhes do que aconteceu durante a manutenção do se
 
 ### **a) Com suas palavras defina:**
 
-#### - I) O que é o protocolo de comunicação HTTP e como ele Funciona;
+#### - **I) O que é o protocolo de comunicação HTTP e como ele Funciona;**
 
 Protocolo de requisição e resposta,utilizando os metodos HTTP para comunicação.
 
-#### -  II) O que é REST, equal é a sua relação com Com Protocolo HTTP;
+#### -  **II) O que é REST, equal é a sua relação com Com Protocolo HTTP;**
 
 Rest é uma especificação que define s forma de comunicação entre componentes de software na web independente da linguagem de programação,um estilo aqrquitetural utilizando os protocolos HTTP seguindo algumas regras CONSTRAINTS.
 
-#### - III) O que é WEB API,e qual sua relação com REST:
+#### - **III) O que é WEB API,e qual sua relação com REST:**
 
 API REST, também chamada de API RESTful, é uma interface de programação de aplicações (API ou API web) que está em conformidade com as restrições do estilo de arquitetura REST, permitindo a interação com serviços web RESTful.
 
@@ -139,22 +139,22 @@ No framework Swagger, existem ferramentas para os seguintes tipos de tarefas a s
 
 ### **a) Com suas palavras conceitue**
 
-* O que é JDBC?
+* **O que é JDBC?**
 
 È um componente de software que intermedia o acesso de uma aplicação com um banco de dados.
 
-* O que é ORM, cite 3 exemplos?
+* **O que é ORM, cite 3 exemplos?**
 
 Mapeamento Objeto Relacional, mapeamento de classes que representam entidades para tabela de uma banco de dados relacional.
 Django (Python)
 Laravel (PHP)
 Hibernate (Java)
 
-* O que é JPA e qual é a sua relação com os ORM’s?
+* **O que é JPA e qual é a sua relação com os ORM’s?**
 
 È uma especificação JEE uma solução ORM para persistencia de dados que é padronizada para desenvolvimento de aplicaçãoes.
 
-* O que é Spring Data?
+* **O que é Spring Data?**
 
 O SpringData é um projeto da SpringSource com proposta de unificar e facilitar o acesso a diferentes tecnologias de armazenamento de dados, como bancos de dados relacionais e os NoSQL.
 
@@ -162,3 +162,29 @@ O SpringData é um projeto da SpringSource com proposta de unificar e facilitar 
 ### **b) O que caracteriza um projeto “CRUD básico”?**
 
 CRUD (Create, Read, Update, Delete) a qual representa as quatro principais operações com bancos de dados: Criar, Ler, Atualizar e Excluir dados.
+
+
+## ✔**Desafio 5**
+
+
+### 🏷**Sobre Service**
+
+
+### **a)  Defina  com  suas  palavras  qual  é  a  responsabilidade  das  camadas  vistas  até  agora:
+
+
+ * **Entity:**
+
+ Representa as entidades que serão persistidas em um banco de dados no modelo ORM.
+
+ * **Controller:**
+
+ A camada Controller (controlador) lida com as requisições dos usuários. É responsável por retornar uma resposta com a ajuda das camadas Model e View.
+
+ * **Repository:**
+ 
+ Repository permite realizar o isolamento entre a camada de acesso a dados de sua aplicação e sua camada de apresentação e camada de negócios .
+
+ * **Service:**
+
+  A camada de serviço contém a lógica de negócios. Em particular, ele contém a lógica de validação.Operação sem estado que realiza uma tarefa de negócio.
