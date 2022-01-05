@@ -1,7 +1,6 @@
 package br.com.desafiofour.controller;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.BeanUtils;
@@ -16,11 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.desafiofour.exception.EntityNotFoundException;
-import br.com.desafiofour.model.Category;
 import br.com.desafiofour.model.Entry;
-import br.com.desafiofour.repositoy.CategoryRepository;
-import br.com.desafiofour.repositoy.EntryRepository;
 import br.com.desafiofour.service.EntryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -31,22 +26,20 @@ import io.swagger.annotations.ApiOperation;
 public class EntryController {
 
 	@Autowired
-	private EntryRepository entryRepository;
-
-	@Autowired
 	private EntryService entryService;
 
 	@ApiOperation("Listar")
 	@GetMapping
 	public List<Entry> listAll() {
-		return entryRepository.findAll();
+
+		return entryService.listEntry();
 	}
 
 	@ApiOperation("Listar por Id")
 	@GetMapping("/{entryId}")
 	public Entry findById(@PathVariable Long entryId) {
 
-		return listOrFail(entryId);
+		return entryService.listOrFail(entryId);
 
 	}
 
@@ -54,7 +47,7 @@ public class EntryController {
 	@GetMapping("/entry/pagos")
 	public List<Entry> getPaid() {
 
-		List<Entry> listaPagos = listAll();
+		List<Entry> listaPagos = entryService.listEntry();
 
 		return listaPagos.stream().filter(lista -> lista.isPaid() == true).collect(Collectors.toList());
 
@@ -64,7 +57,7 @@ public class EntryController {
 	@GetMapping("/entry/naopagos")
 	public List<Entry> getNotPaid() {
 
-		List<Entry> listaNaoPagos = entryRepository.findAll();
+		List<Entry> listaNaoPagos = entryService.listEntry();
 
 		return listaNaoPagos.stream().filter(lista -> lista.isPaid() == false).collect(Collectors.toList());
 
@@ -78,7 +71,7 @@ public class EntryController {
 
 		if (categoryId == true) {
 
-			Entry entrySave = entryRepository.save(entry);
+			Entry entrySave = entryService.save(entry);
 
 			return ResponseEntity.ok(entrySave);
 
@@ -89,13 +82,15 @@ public class EntryController {
 
 	@ApiOperation("Atualizar")
 	@PutMapping("/{entryId}")
-	public Entry upDate(@PathVariable Long entryId, @RequestBody Entry entry) {
+	public ResponseEntity<Entry> upDate(@PathVariable Long entryId, @RequestBody Entry entry) {
 
-		Entry entryAtual = listOrFail(entryId);
+		Entry entryAtual = entryService.listOrFail(entryId);
 
 		BeanUtils.copyProperties(entry, entryAtual, "id");
 
-		return entryRepository.save(entryAtual);
+		Entry savedEntry = entryService.save(entryAtual);
+
+		return ResponseEntity.ok(savedEntry);
 
 	}
 
@@ -103,18 +98,12 @@ public class EntryController {
 	@DeleteMapping("/{entryId}")
 	public ResponseEntity<Entry> delete(@PathVariable Long entryId) {
 
-		Entry entry = listOrFail(entryId);
+		Entry entry = entryService.listOrFail(entryId);
 
-		entryRepository.delete(entry);
+		entryService.delete(entry.getId());
 
 		return ResponseEntity.noContent().build();
 
-	}
-
-	public Entry listOrFail(Long entryId) {
-
-		return entryRepository.findById(entryId).orElseThrow(
-				() -> new EntityNotFoundException(String.format("Lançamento %d não encontrada:", entryId)));
 	}
 
 }

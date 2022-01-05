@@ -1,5 +1,7 @@
 package br.com.desafiofour.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +15,13 @@ public class CategoryService {
 	@Autowired
 	private CategoryRepository categoryRepository;
 
+	public List<Category> listCategory() {
+
+		return categoryRepository.findAll();
+	}
+
 	public Category save(Category category) {
-		
+
 		return categoryRepository.save(category);
 	}
 
@@ -23,18 +30,17 @@ public class CategoryService {
 		categoryRepository.deleteById(id);
 	}
 
-	/*
-	 * public String idCategoryByName(Category nameCategory) {
-	 * 
-	 * 
-	 * 
-	 * 
-	 * return nameCategory; }
-	 */
-	
+	public String getByName(String nameCategory) {
+
+		String idCatByName = categoryRepository.findByName(nameCategory).getId().toString();
+
+		return idCatByName;
+
+	}
+
 	public Category listOrFail(Long categoryId) {
 
-		return categoryRepository.findById(categoryId)
-				.orElseThrow(() -> new EntityNotFoundException(String.format("Categoria %d não encontrada:", categoryId)));
+		return categoryRepository.findById(categoryId).orElseThrow(
+				() -> new EntityNotFoundException(String.format("Categoria %d não encontrada:", categoryId)));
 	}
 }

@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.desafiofour.exception.EntityNotFoundException;
 import br.com.desafiofour.model.Category;
 import br.com.desafiofour.repositoy.CategoryRepository;
 import br.com.desafiofour.service.CategoryService;
@@ -29,65 +29,67 @@ import io.swagger.annotations.ApiOperation;
 public class CategoryController {
 
 	@Autowired
-	private CategoryRepository categoryRepository;
-	
-	@Autowired
 	private CategoryService categoryService;
-	
+
 	@ApiOperation("Listar")
 	@GetMapping
-	public List<Category> read() {
+	public ResponseEntity<List<Category>> read() {
 
-		return categoryRepository.findAll();
+		List<Category> categoryList = categoryService.listCategory();
+
+		return ResponseEntity.ok(categoryList);
 	}
-	
+
 	@ApiOperation("Listar por Id")
 	@GetMapping("/{categoryId}")
-	public Category findById(@PathVariable Long categoryId) {
+	public Category getById(@PathVariable Long categoryId) {
 
 		return categoryService.listOrFail(categoryId);
 
 	}
-	
-	@ApiOperation("Criar")
-	@PostMapping
-	@ResponseStatus(HttpStatus.CREATED)
-	public Category create(@RequestBody Category category) {
 
-		return categoryService.save(category);
+	@ApiOperation("Listar Id por nome")
+	@GetMapping("/searchByName")
+	public String getByName(@RequestParam String name) {
+
+		return categoryService.getByName(name);
 
 	}
-	
-	
-	
+
+	@ApiOperation("Criar")
+	@PostMapping
+	public ResponseEntity<Category> create(@RequestBody Category category) {
+
+		Category savedCtegory = categoryService.save(category);
+
+		return ResponseEntity.ok(savedCtegory);
+
+	}
+
 	@ApiOperation("Atualizar")
 	@PutMapping("/{categoryId}")
-	public Category upDate(@PathVariable Long categoryId, @RequestBody Category category) {
+	public ResponseEntity<Category> upDate(@PathVariable Long categoryId, @RequestBody Category category) {
 
-		Category categoryAtual = listOrFail(categoryId);
+		Category categoryAtual = categoryService.listOrFail(categoryId);
 
 		BeanUtils.copyProperties(category, categoryAtual, "id");
 
-		return categoryService.save(categoryAtual);
+		Category savedCategory = categoryService.save(categoryAtual);
+
+		return ResponseEntity.ok(savedCategory);
 
 	}
-	
+
 	@ApiOperation("Excluir")
 	@DeleteMapping("/{categoryId}")
 	public ResponseEntity<Category> delete(@PathVariable Long categoryId) {
 
-		Category category = listOrFail(categoryId);
+		Category category = categoryService.listOrFail(categoryId);
 
-		categoryRepository.delete(category);
+		categoryService.delete(category.getId());
 
 		return ResponseEntity.noContent().build();
 
-	}
-
-	public Category listOrFail(Long categoryId) {
-
-		return categoryRepository.findById(categoryId)
-				.orElseThrow(() -> new EntityNotFoundException(String.format("Categoria %d não encontrada:", categoryId)));
 	}
 
 }

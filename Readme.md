@@ -170,7 +170,7 @@ CRUD (Create, Read, Update, Delete) a qual representa as quatro principais opera
 ### 🏷**Sobre Service**
 
 
-### **a)  Defina  com  suas  palavras  qual  é  a  responsabilidade  das  camadas  vistas  até  agora:
+### **a)  Defina  com  suas  palavras  qual  é  a  responsabilidade  das  camadas  vistas  até  agora:**
 
 
  * **Entity:**
