@@ -32,9 +32,9 @@ public class CategoryService {
 
 	public String getByName(String nameCategory) {
 
-		String idCatByName = categoryRepository.findByName(nameCategory).getId().toString();
+		String idCategoryByName = categoryRepository.findByName(nameCategory).getId().toString();
 
-		return idCatByName;
+		return idCategoryByName;
 
 	}
 

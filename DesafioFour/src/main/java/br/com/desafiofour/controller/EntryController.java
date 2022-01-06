@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,36 +31,44 @@ public class EntryController {
 
 	@ApiOperation("Listar")
 	@GetMapping
-	public List<Entry> listAll() {
+	public ResponseEntity<List<Entry>> listAll() {
 
-		return entryService.listEntry();
+		List<Entry> listAllEntry = entryService.listEntry();
+
+		return ResponseEntity.ok(listAllEntry);
 	}
 
 	@ApiOperation("Listar por Id")
 	@GetMapping("/{entryId}")
-	public Entry findById(@PathVariable Long entryId) {
+	public ResponseEntity<Entry> findById(@PathVariable Long entryId) {
 
-		return entryService.listOrFail(entryId);
+		return ResponseEntity.ok(entryService.listOrFail(entryId));
 
 	}
 
 	@ApiOperation("Lançamentos pagos")
 	@GetMapping("/entry/pagos")
-	public List<Entry> getPaid() {
+	public ResponseEntity<List<Entry>> getPaid() {
 
 		List<Entry> listaPagos = entryService.listEntry();
 
-		return listaPagos.stream().filter(lista -> lista.isPaid() == true).collect(Collectors.toList());
+		return ResponseEntity
+				.ok(listaPagos.stream()
+						.filter(lista -> lista.isPaid() == true)
+						.collect(Collectors.toList()));
 
 	}
 
 	@ApiOperation("Lançamentos não pagos")
 	@GetMapping("/entry/naopagos")
-	public List<Entry> getNotPaid() {
+	public ResponseEntity<List<Entry>> getNotPaid() {
 
 		List<Entry> listaNaoPagos = entryService.listEntry();
 
-		return listaNaoPagos.stream().filter(lista -> lista.isPaid() == false).collect(Collectors.toList());
+		return ResponseEntity
+				.ok(listaNaoPagos.stream()
+						.filter(lista -> lista.isPaid() == false)
+						.collect(Collectors.toList()));
 
 	}
 
@@ -73,7 +82,7 @@ public class EntryController {
 
 			Entry entrySave = entryService.save(entry);
 
-			return ResponseEntity.ok(entrySave);
+			return ResponseEntity.status(HttpStatus.CREATED).body(entrySave);
 
 		} else {
 			return ResponseEntity.notFound().build();
@@ -96,7 +105,7 @@ public class EntryController {
 
 	@ApiOperation("Excluir")
 	@DeleteMapping("/{entryId}")
-	public ResponseEntity<Entry> delete(@PathVariable Long entryId) {
+	public ResponseEntity<Void> delete(@PathVariable Long entryId) {
 
 		Entry entry = entryService.listOrFail(entryId);
 

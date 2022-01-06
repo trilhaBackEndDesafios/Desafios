@@ -14,11 +14,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.desafiofour.model.Category;
-import br.com.desafiofour.repositoy.CategoryRepository;
 import br.com.desafiofour.service.CategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -42,17 +40,17 @@ public class CategoryController {
 
 	@ApiOperation("Listar por Id")
 	@GetMapping("/{categoryId}")
-	public Category getById(@PathVariable Long categoryId) {
+	public ResponseEntity<Category> getById(@PathVariable Long categoryId) {
 
-		return categoryService.listOrFail(categoryId);
+		return ResponseEntity.ok(categoryService.listOrFail(categoryId));
 
 	}
 
 	@ApiOperation("Listar Id por nome")
 	@GetMapping("/searchByName")
-	public String getByName(@RequestParam String name) {
+	public ResponseEntity<String> getByName(@RequestParam String name) {
 
-		return categoryService.getByName(name);
+		return ResponseEntity.ok(categoryService.getByName(name));
 
 	}
 
@@ -60,9 +58,9 @@ public class CategoryController {
 	@PostMapping
 	public ResponseEntity<Category> create(@RequestBody Category category) {
 
-		Category savedCtegory = categoryService.save(category);
+		Category savedCategory = categoryService.save(category);
 
-		return ResponseEntity.ok(savedCtegory);
+		return ResponseEntity.status(HttpStatus.CREATED).body(savedCategory);
 
 	}
 
@@ -82,7 +80,7 @@ public class CategoryController {
 
 	@ApiOperation("Excluir")
 	@DeleteMapping("/{categoryId}")
-	public ResponseEntity<Category> delete(@PathVariable Long categoryId) {
+	public ResponseEntity<Void> delete(@PathVariable Long categoryId) {
 
 		Category category = categoryService.listOrFail(categoryId);
 
