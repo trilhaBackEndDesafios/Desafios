@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.desafiofour.exception.EntityNotFoundException;
-import br.com.desafiofour.model.Category;
+import br.com.desafiofour.model.entity.Category;
 import br.com.desafiofour.repositoy.CategoryRepository;
 
 @Service

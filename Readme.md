@@ -167,8 +167,9 @@ CRUD (Create, Read, Update, Delete) a qual representa as quatro principais opera
 ## ✔**Desafio 5**
 
 
-### 🏷**Sobre Service**
+### 🏷**Sobre** 
 
+   ## **Service**
 
 ### **a)  Defina  com  suas  palavras  qual  é  a  responsabilidade  das  camadas  vistas  até  agora:**
 
@@ -188,3 +189,17 @@ CRUD (Create, Read, Update, Delete) a qual representa as quatro principais opera
  * **Service:**
 
   A camada de serviço contém a lógica de negócios. Em particular, ele contém a lógica de validação.Operação sem estado que realiza uma tarefa de negócio.
+
+
+## ✔**Desafio 6**
+
+
+### 🏷**Sobre**
+
+##  **DTO** 
+
+       
+
+### **a) O que significa DTO, e qual sua importância?**
+
+Data transfer object: Objeto de Transferência de Dados, um padrão de projeto muito usado para transporte de dados em diferentes camadas do sistema .Um DTO agrupa um conjunto de propriedades de uma ou mais classes de entidades em uma classse de transferência mais simples apenas com as propriedades necessarias.

@@ -1,6 +1,7 @@
 package br.com.desafiofour.controller;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.BeanUtils;
@@ -16,7 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.desafiofour.model.Entry;
+import br.com.desafiofour.dto.EntryDto;
+import br.com.desafiofour.model.entity.Entry;
 import br.com.desafiofour.service.EntryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -38,6 +40,15 @@ public class EntryController {
 		return ResponseEntity.ok(listAllEntry);
 	}
 
+	@ApiOperation("Agrupar por Categoria")
+	@GetMapping("GroupEntryById")
+	public ResponseEntity<Map<Long, List<EntryDto>>> groupByCategory() {
+
+		Map<Long, List<EntryDto>> entry = entryService.listByCategory();
+
+		return ResponseEntity.ok(entry);
+	}
+
 	@ApiOperation("Listar por Id")
 	@GetMapping("/{entryId}")
 	public ResponseEntity<Entry> findById(@PathVariable Long entryId) {
@@ -53,9 +64,7 @@ public class EntryController {
 		List<Entry> listaPagos = entryService.listEntry();
 
 		return ResponseEntity
-				.ok(listaPagos.stream()
-						.filter(lista -> lista.isPaid() == true)
-						.collect(Collectors.toList()));
+				.ok(listaPagos.stream().filter(lista -> lista.isPaid() == true).collect(Collectors.toList()));
 
 	}
 
@@ -66,9 +75,7 @@ public class EntryController {
 		List<Entry> listaNaoPagos = entryService.listEntry();
 
 		return ResponseEntity
-				.ok(listaNaoPagos.stream()
-						.filter(lista -> lista.isPaid() == false)
-						.collect(Collectors.toList()));
+				.ok(listaNaoPagos.stream().filter(lista -> lista.isPaid() == false).collect(Collectors.toList()));
 
 	}
 

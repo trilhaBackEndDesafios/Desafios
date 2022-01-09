@@ -1,4 +1,4 @@
-package br.com.desafiofour.model;
+package br.com.desafiofour.model.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

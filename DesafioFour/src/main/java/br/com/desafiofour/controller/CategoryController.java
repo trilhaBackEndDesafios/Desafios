@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.desafiofour.model.Category;
+import br.com.desafiofour.assembler.CategoryDtoOutPut;
+import br.com.desafiofour.model.entity.Category;
 import br.com.desafiofour.service.CategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -29,7 +30,11 @@ public class CategoryController {
 	@Autowired
 	private CategoryService categoryService;
 
+	@Autowired
+	private CategoryDtoOutPut categoryDtoOutPut;
+
 	@ApiOperation("Listar")
+
 	@GetMapping
 	public ResponseEntity<List<Category>> read() {
 
@@ -55,6 +60,7 @@ public class CategoryController {
 	}
 
 	@ApiOperation("Criar")
+
 	@PostMapping
 	public ResponseEntity<Category> create(@RequestBody Category category) {
 
