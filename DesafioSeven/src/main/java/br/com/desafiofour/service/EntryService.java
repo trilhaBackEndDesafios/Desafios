@@ -60,10 +60,10 @@ public class EntryService {
 
 		List<Entry> list = listEntry();
 
-		Map<Long, List<EntryDto>> multimap = list.stream().collect(Collectors.groupingBy(Entry::getCategoryId,
+		Map<Long, List<EntryDto>> mapEntryDto = list.stream().collect(Collectors.groupingBy(Entry::getCategoryId,
 				Collectors.mapping(p -> entryDtoOutPut.toModel(p), Collectors.toList())));
 
-		return multimap;
+		return mapEntryDto;
 
 	}
 

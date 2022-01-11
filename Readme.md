@@ -203,3 +203,12 @@ CRUD (Create, Read, Update, Delete) a qual representa as quatro principais opera
 ### **a) O que significa DTO, e qual sua importância?**
 
 Data transfer object: Objeto de Transferência de Dados, um padrão de projeto muito usado para transporte de dados em diferentes camadas do sistema .Um DTO agrupa um conjunto de propriedades de uma ou mais classes de entidades em uma classse de transferência mais simples apenas com as propriedades necessarias.
+
+
+
+## ✔**Desafio 7**
+
+
+### 🏷**Sobre**
+
+##  **Tratamento de Dados** 
