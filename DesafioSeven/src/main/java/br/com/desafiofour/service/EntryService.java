@@ -1,9 +1,8 @@
 package br.com.desafiofour.service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -61,26 +60,11 @@ public class EntryService {
 
 		List<Entry> list = listEntry();
 
-		Map<Long, List<EntryDto>> groupIdCategory = new HashMap<Long, List<EntryDto>>();
+		Map<Long, List<EntryDto>> multimap = list.stream().collect(Collectors.groupingBy(Entry::getCategoryId,
+				Collectors.mapping(p -> entryDtoOutPut.toModel(p), Collectors.toList())));
 
-		EntryDto entryDto = new EntryDto();
+		return multimap;
 
-		for (Entry entry : list) {
-
-			Long key = entry.getCategoryId();
-
-			entryDto = entryDtoOutPut.toModel(entry);
-
-			if (groupIdCategory.get(key) == null) {
-
-				groupIdCategory.put(key, new ArrayList<EntryDto>());
-
-			}
-
-			groupIdCategory.get(key).add(entryDto);
-
-		}
-		return groupIdCategory;
 	}
 
 }
