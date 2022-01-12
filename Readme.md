@@ -212,3 +212,46 @@ Data transfer object: Objeto de Transferência de Dados, um padrão de projeto m
 ### 🏷**Sobre**
 
 ##  **Tratamento de Dados** 
+
+
+## ✔**Desafio 8**
+
+
+### 🏷**Sobre**
+
+##  **Tratamento de Exceptions** 
+
+### **a) O que são exceptions?**
+
+Exceção é qualquer condição de erro ou comportamento inesperado encontrado por um programa em execução.
+
+### **b) Qual é o funcionamento do try, catch e finally?**
+
+* Try:
+
+  Contém o código que representa a execução normal do trecho de código que pode acarretar em uma exceção.
+
+* Catch:
+
+  Contém o código a ser executado caso uma exceção ocorra.Deve ser especificado o tipo da exceção a ser tratado.
+
+* Finally:
+
+  É um bloco que contém codigo a ser executado independentemente de ter ocorrido ou não uma exceção.
+
+
+### **c) Qual a relação entre “try, catch e finally” e “throws”?**
+
+Define bloco de tratamento de exceção e declara que um método pode levantar uma exceção.
+
+### **d) Para que serve a annotation @ExceptionHandler?**
+
+Tratamento de exceção baseado em controlador.Adicionar @ExceptionHandler métodos extras a qualquer controlador para lidar especificamente com exceções lançadas por @RequestMapping métodos de manipulação de solicitação no mesmo controlador
+
+### **e) Para que serve o comando throw?**
+
+A função do throw é lançar a exceção para o método chamador, ou seja, leva o erro adiante.
+
+### **f) Para que serve a annotation @ControllerAdvice?**
+
+Concentra o tratamento de exceçãoes  que são espalhados em todos os controllers.
