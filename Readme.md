@@ -255,3 +255,7 @@ A função do throw é lançar a exceção para o método chamador, ou seja, lev
 ### **f) Para que serve a annotation @ControllerAdvice?**
 
 Concentra o tratamento de exceçãoes  que são espalhados em todos os controllers.
+
+### **VII. Realize novos testes, verifique o resultado final e escreva sua própria conclusão sobre exceptions**
+
+Com o tratamento de exceções pode se devolver mensagem que especificam o motivo correto do erro no caso de uso da API de maneira incorreta que o estado da aplicação não permite devolvendo status Http corretos customizando as reposta e modelando com respostas pradonizadas.
