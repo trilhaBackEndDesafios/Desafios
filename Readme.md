@@ -259,3 +259,37 @@ Concentra o tratamento de exceçãoes  que são espalhados em todos os controlle
 ### **VII. Realize novos testes, verifique o resultado final e escreva sua própria conclusão sobre exceptions**
 
 Com o tratamento de exceções pode se devolver mensagem que especificam o motivo correto do erro no caso de uso da API de maneira incorreta que o estado da aplicação não permite devolvendo status Http corretos customizando as reposta e modelando com respostas pradonizadas.
+
+## ✔**Desafio 9**
+
+### 🏷**Sobre**
+
+##  **Arquitetura** 
+
+### **a) O que é um padrão de projeto e por que nós os utilizamos?**
+Padrões de projeto são soluções típicas para problemas comuns em projeto de software. Eles são como plantas de obra pré fabricadas que você pode customizar para resolver um problema de projeto recorrente em seu código.
+
+### **b) Cite e explique com suas palavras:**
+
+* **I. Um dos padrões de criação;**
+O Factory Method é um padrão criacional de projeto que fornece uma interface para criar objetos em uma superclasse, mas permite que as subclasses alterem o tipo de objetos que serão criados
+
+* **II. Um dos padrões estruturais;**
+O Adapter é um padrão de projeto estrutural que permite objetos com interfaces incompatíveis colaborarem entre si.
+
+* **II. Um dos padrões comportamentais;**
+O Strategy é um padrão de projeto comportamental que permite que você defina uma família de algoritmos, coloque-os em classes separadas, e faça os objetos deles intercambiáveis
+
+### **c) Explique o conceito de arquitetura de software e seu proposito;** 
+Arquitetura de software, é possível entender as diferenças entre as linguagens, sistemas operacionais e ambientes da computação. Ou seja, qualquer componente tecnológico pode ser usado para integrar uma solução arquitetural. Essa parte é essencial porque otimiza o trabalho dos designers e desenvolvedores, permitindo que uma aplicação esteja dentro dos padrões básicos necessários para funcionar de forma assertiva.
+
+### **I. Qual arquitetura estamos seguindo até o momento? Justifique sua resposta**
+Utilizado no projeto ate o momento arquitetura em camadas e cada uma com suas responsabilidades.
+
+### **g) O que significa a sigla SOLID?**
+São 5 principios da programção orientada a objetos que facilitam no desenvolvimento de software tornando facil de montar e estender.
+
+### **h) Quais princípios foram utilizados no projeto até o momento? Explique**
+S = Classes do projeto com uma unica responsabilidade.
+O = Classes abertas para extenções e fechada para modeificações.
+D = Inversão de dependencia. 
