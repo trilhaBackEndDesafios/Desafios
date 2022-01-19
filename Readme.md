@@ -307,11 +307,17 @@ D = Inversão de dependencia.
 Tecnologia de backend com conjunto de projetos para resolver varios problemas cria aplicações Java  com facilidade e flexibilidade.Eco sistema Spring.
 
 ### **b) Cite 3 exemplos de ferramentas Spring e suas respectivas finalidades**
+
 - **Spring Web**
+
  Como muitos outros frameworks da web, é projetado em torno do padrão de controlador frontal, onde um Servlet, o DispatcherServlet, fornece um algoritmo compartilhado para processamento de solicitações, enquanto o trabalho real é realizado por componentes delegados configuráveis. Este modelo é flexível e suporta diversos fluxos de trabalho.
+
 - **Spring Data** 
+
  Fornecer um modelo de programação familiar e consistente baseado em Spring para acesso a dados, mantendo as características especiais do armazenamento de dados subjacente facilita o uso de tecnologias de acesso a dados, bancos de dados relacionais e não relacionais, estruturas de redução de mapa e serviços de dados baseados em nuvem.
+
 - **Spring Boot** 
+
 Spring Boot facilita a criação de aplicativos independentes baseados em Spring de nível de produção que você pode "apenas executar"incorpora o Tomcat, Jetty ou Undertow diretamente,fornece dependências 'iniciais' opinativas para simplificar sua configuração de compilação
 
 ### **c) Quais ferramentas do Spring foram utilizadas na trilha até o momento?**
@@ -330,6 +336,15 @@ Spring Boot facilita a criação de aplicativos independentes baseados em Spring
 
 ### **e) Descreva os passos de criação de uma Web API Spring boot, com conexão com SQL Server**
 
+1) Primeiro passo é criar um projeto Spring Boot no Spring Initializr e adicionar as dependencias necessaria para o projeto configurando as dependencias.
+
+2) Com o projeto criado, criamos os pacotes  CONFIG / CONTROLLER / MODEL / REPOSITORY / SERVICE 
+
+3) Com as models criadas, criamos APPLICATION PROPERTIES parâmetros para acesso ao banco de dados, a porta http que a API deverá utilizar, e diversos outros parâmetro
+
+4) Com as funcionalidades criadas, faremos agora as rotas nas controllers.
+
+5)configurar o Lombok para construção de encapsulamentos (Getters e Setters), criação de construtores, hashcode e equals, etc.
 
 ### **f) Qual a funcionalidade do pom.xml?**
 
@@ -381,3 +396,9 @@ Adicionando ao projeto Spring Security
 Spring Data 
 
 ### **n) Explique e exemplifique como criar um agendamento de execução de métodos Spring; Cite exemplos de usabilidade;**
+
+Precisamos indicar ao Spring que ele tenha esse tipo de comportamento.A primeira delas é fazer com que a classe que esteja utilizando a @Scheduled seja gerenciada pelo Spring. A forma mais fácil de fazer isso é basicamente tornando-a um Component por meio da annotation @Component, precisamos apenas informar ao Spring que queremos habilitar o agendamento para ela por meio da annotation @EnableScheduling,As regras simples que precisamos seguir para anotar um método com @Scheduled são:
+o método normalmente deve ter um tipo de retorno void (se não, o valor retornado será ignorado)
+o método não deve esperar nenhum parâmetro.
+
+Ex: Relatorios de um  fluxo de vendas por um determinado período, por exemplo, a cada hora, ou então, a cada dia.
