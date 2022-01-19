@@ -293,3 +293,91 @@ São 5 principios da programção orientada a objetos que facilitam no desenvolv
 S = Classes do projeto com uma unica responsabilidade.
 O = Classes abertas para extenções e fechada para modeificações.
 D = Inversão de dependencia. 
+
+
+## ✔**Desafio 10**
+
+
+### 🏷**Sobre**
+
+##  **Spring** 
+
+### **a) O que você entende por Spring Framework?**
+
+Tecnologia de backend com conjunto de projetos para resolver varios problemas cria aplicações Java  com facilidade e flexibilidade.Eco sistema Spring.
+
+### **b) Cite 3 exemplos de ferramentas Spring e suas respectivas finalidades**
+- **Spring Web**
+ Como muitos outros frameworks da web, é projetado em torno do padrão de controlador frontal, onde um Servlet, o DispatcherServlet, fornece um algoritmo compartilhado para processamento de solicitações, enquanto o trabalho real é realizado por componentes delegados configuráveis. Este modelo é flexível e suporta diversos fluxos de trabalho.
+- **Spring Data** 
+ Fornecer um modelo de programação familiar e consistente baseado em Spring para acesso a dados, mantendo as características especiais do armazenamento de dados subjacente facilita o uso de tecnologias de acesso a dados, bancos de dados relacionais e não relacionais, estruturas de redução de mapa e serviços de dados baseados em nuvem.
+- **Spring Boot** 
+Spring Boot facilita a criação de aplicativos independentes baseados em Spring de nível de produção que você pode "apenas executar"incorpora o Tomcat, Jetty ou Undertow diretamente,fornece dependências 'iniciais' opinativas para simplificar sua configuração de compilação
+
+### **c) Quais ferramentas do Spring foram utilizadas na trilha até o momento?**
+
+- Spring Web
+- Spring Data JPA
+- Spring Boot Dev Tools
+
+### **d) Cite 5 vantagens em utilizar Spring**
+
+- Canivete suiço para desenvolvedores Java.
+- Simplicidade
+- Maturidade
+- Modularidade
+- Evolução constantes
+
+### **e) Descreva os passos de criação de uma Web API Spring boot, com conexão com SQL Server**
+
+
+### **f) Qual a funcionalidade do pom.xml?**
+
+Um POM contém as configurações do mavem no projeto.
+
+### **g) Qual a funcionalidades do applications.properties?**
+
+Arquivo padrão de configuração utilizando chave e valor para evitar configurações misturados no códigos.
+
+### **h) Qual o propósito das Annotations?**
+
+Fornecer recursos  em como configuramos os comportamentos do Spring Framework  fornecem muito contexto em sua declaração.
+
+### **i) Cite 10 annotations, com suas respectivas finalidades e descreva ou desenhe um cenário exemplificando a sua utilização**
+
+@RequestMapping – mapeia requisições REST.
+
+@Controller – define uma classe que contém métodos para estrutura Spring MVC.
+
+@RestController – define uma classe que contém métodos para uma API RESTful.
+
+@RequestBody – mapeia o corpo da solicitação HTTP para um objeto.
+
+@PathVariable – define o recebimento de parâmetros de uma requisição.
+
+@RequestParam – com essa anotação, podemos acessar parâmetros da solicitação HTTP.
+
+@ExcepetionHandler – lida com exceções. A configuração do Spring detecta essa anotação e registra o método como manipulador de exceções para a classe de exceção do argumento e suas interfaces.
+
+@ResponseStatus – com essa anotação, podemos especificar o status HTTP desejado da resposta.
+
+@Entity – especifica que a classe representa uma entidade no banco de dados. O estado da classe anotada com essa annotation é gerenciado pelo contexto de persistência subjacente.
+
+@GeneratedValue – especifica que o valor do identificador de entidade é gerado automaticamente utilizando a coluna de identidade, uma sequência de banco de dados ou um gerador de tabelas.
+
+### **j) O que é um advice em Spring? Quais os tipos de advice para o Spring?**
+
+Advice  é uma ação realizada por um aspecto em um ponto de junção específico. Diferentes tipos de conselhos incluem conselhos “around,” “before” and “after” advice.
+### **k) O que é Spring IoC Container?**
+
+Injeção de dependencias do framework responsável por instanciar,configurar e injetar  os objetos em outros objetos.Gerenciados pelo container do Spring(Bean)
+
+### **l) Como adicionamos segurança à nossa aplicação Spring?**
+
+Adicionando ao projeto Spring Security
+
+### **m) Qual é o pacote Spring responsável pelas conexões com os bancos de dados?**
+
+Spring Data 
+
+### **n) Explique e exemplifique como criar um agendamento de execução de métodos Spring; Cite exemplos de usabilidade;**
