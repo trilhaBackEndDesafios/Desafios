@@ -402,3 +402,47 @@ o método normalmente deve ter um tipo de retorno void (se não, o valor retorna
 o método não deve esperar nenhum parâmetro.
 
 Ex: Relatorios de um  fluxo de vendas por um determinado período, por exemplo, a cada hora, ou então, a cada dia.
+
+
+
+## ✔**Desafio 11**
+
+
+### 🏷**Sobre**
+
+##  **Libs/Drivers** 
+
+
+### **a) O que são libs quando se trata de código?**
+
+Lib (ou biblioteca) é um conjunto de funcionalidades (no caso do Java, classes úteis ou funções úteis encapsuladas em classes) que podem ser reaproveitadas pelos seus projetos
+
+### **b) Cite 2 libs populares no Java e seu objetivo**
+
+Jackson - é o formato de troca de dados de fato no desenvolvimento de software moderno.
+
+Mockito - Uma maneira de escrever o teste Unit/Integrationcom  operações de banco de dados, operações de E/S.
+
+### **c) Qual é o propósito do Maven, e qual é o seu relacionamento com o arquivo pom.xml?**
+
+Ferramenta de gerenciamento de dependencias  e automação de build e o pom.xml é onde ficam as configurações do mavem no projeto.
+
+### **d) Qual é a diferença do Maven para o Grandle?**
+
+Gradle é baseado em um gráfico de dependências de tarefas – em que as tarefas são as coisas que fazem o trabalho. Gradle possui o JCenter.
+
+Maven é baseado em um modelo fixo e linear de fases.O Maven possui o Maven Central
+
+### **e) Com os conhecimentos adquiridos até o agora, realize uma conexão com o desafio 3 onde falamos sobre JDBC, os drivers de comunicação com os bancos de dados.**
+
+- I. Qual a relação entre os termos lib, driver e JDBC? 
+
+São um conjunto de classes e interfaces ( API )com classes ou funções úteis encapsuladas em classes .
+
+- II. Como é adicionado uma lib no projeto?  
+
+Adicionando a dependencia no pom.xml.
+
+- III.  Escolha  um  banco  de  dados  (menos  o  H2)  e  explique  como  utilizar  o  driver  de  comunicação.
+
+Primeiro adicionamos o driver mysql no pom.xml com os JARs,configurando o datasource e uma das maneiras  que é no aplication properties  com a url de conexção onde o driver JDBC MYSQL ira interpretar o codigo com uma senha e um usúario. 
