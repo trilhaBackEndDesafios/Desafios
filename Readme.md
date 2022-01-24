@@ -484,4 +484,4 @@ Validar que cada unidade de trabalho se comporta como projetada, esperada ou pre
 
 - testaEntrygetLancamentosDependentes_OK(testes.TrilhaBackTestes) - Testes para registros ok. 
 
-_testaLancamentosDependentesEmpty_NoCotent(testes.TrilhaBackTestes) - Teste para campos vazios.
+- testaLancamentosDependentesEmpty_NoCotent(testes.TrilhaBackTestes) - Teste para campos vazios.
