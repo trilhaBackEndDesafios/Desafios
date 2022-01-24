@@ -446,3 +446,42 @@ Adicionando a dependencia no pom.xml.
 - III.  Escolha  um  banco  de  dados  (menos  o  H2)  e  explique  como  utilizar  o  driver  de  comunicação.
 
 Primeiro adicionamos o driver mysql no pom.xml com os JARs,configurando o datasource e uma das maneiras  que é no aplication properties  com a url de conexção onde o driver JDBC MYSQL ira interpretar o codigo com uma senha e um usúario. 
+
+
+## ✔**Desafio 12**
+
+
+### 🏷**Sobre**
+
+##  **Testes** 
+
+### **a) Explique o conceito de teste unitário?**
+
+O teste unitário consiste em verificar o comportamento das menores unidades em sua aplicação, podendo ser esse componente uma função, procedimento, método, classe, objeto.. Garantindo que sua aplicação continue funcionando após alguma alteração em sua base de código.
+
+### **b) Descreva como fazer um código de teste.**
+
+1 - Criar a classe de teste.
+2 - Criar um metodo que não retorna valor.
+3 - Usar a anotação @Test para se tornar um teste gerenciado pelo Junit.
+4 - Fazer injeção da classe de serviço para o método a ser testado.
+5 - Mockar o Repository para utilizar uma simulação do banco de dados.
+6 - Usar as assertivas para comparação dos resultados.
+
+
+### **c) Qual o intuito do teste unitário?**
+
+Validar que cada unidade de trabalho se comporta como projetada, esperada ou pretendida, fornecendo feedback quase instantâneo sobre o projeto e a implementação de seu código.
+
+### **d)  Quais  são  as  ferramentas  que  utilizamos  para  realizar  testes  unitários(2  pelo  menos).**
+
+- JUnit 
+- Mockito.
+
+
+
+- testaLancamentosDependentesNull_NotFound(testes.TrilhaBackTestes) - Testes para campos nulos.
+
+- testaEntrygetLancamentosDependentes_OK(testes.TrilhaBackTestes) - Testes para registros ok. 
+
+_testaLancamentosDependentesEmpty_NoCotent(testes.TrilhaBackTestes) - Teste para campos vazios.
