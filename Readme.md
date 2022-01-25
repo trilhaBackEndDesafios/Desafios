@@ -490,3 +490,77 @@ Validar que cada unidade de trabalho se comporta como projetada, esperada ou pre
 
 - testaLancamentosDependentesEmpty_NoCotent(testes.TrilhaBackTestes) - Teste para campos vazios.
 
+## ✔**Desafio 13**
+
+
+### 🏷**Sobre**
+
+
+##  **Integração** 
+
+---
+### **Disponibilizando aplicação Angular para integração com a API.**
+```
+C:\Users\William_Cardoso\Documents\controle-financeiro>ng serve
+Your global Angular CLI version (10.0.5) is greater than your local version (10.0.5). The local Angular CLI version is used.
+
+
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                                                | Names                                                                           |      Size
+vendor.js                                                                          | vendor                                                                          |   3.08 MB
+scripts.js                                                                         | scripts                                                                         | 667.48 kB
+styles.css, styles.js                                                              | styles                                                                          | 559.27 kB
+polyfills.js                                                                       | polyfills                                                                       | 467.37 kB
+main.js                                                                            | main                                                                            |  15.48 kB
+runtime.js                                                                         | runtime                                                                         |   9.27 kB
+
+                                                                                   | Initial Total                                                                   |   4.76 MB
+
+Lazy Chunk Files                                                                   | Names                                                                           |      Size
+default~pages-categorias-categorias-module~pages-lancamentos-lancamentos-module.js | default~pages-categorias-categorias-module~pages-lancamentos-lancamentos-module |   1.29 MB
+pages-lancamentos-lancamentos-module.js                                            | pages-lancamentos-lancamentos-module                                            | 125.25 kB
+pages-categorias-categorias-module.js                                              | pages-categorias-categorias-module                                              |  32.78 kB
+
+Build at: 2022-01-25T11:39:15.299Z - Hash: 51ea015210025736ad1c - Time: 75670ms
+
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+```
+---
+### **Configuração das Variáveis de Ambiente**
+
+![variaveldeambiente](https://ik.imagekit.io/f1uatti9kjv/VariavelDeAmbiente_Tclm131G6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643125356576)
+
+
+---
+### ** ✔Aplicação integrada com a API**
+---
+### **Lista de Lançamentos**
+
+![Lançamentos](https://ik.imagekit.io/f1uatti9kjv/lancamento_Q6jpcUJIh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109741862)
+
+
+
+### **Lista de Categorias**
+![Categorias](https://ik.imagekit.io/f1uatti9kjv/Categoria_ndxvwMRxh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109711285)
+
+
+
+### **Editar Lançamento**
+![Editando Lançamentos](https://ik.imagekit.io/f1uatti9kjv/EditandoLan%C3%A7amentos_DDw73shc4Jp.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109987016)
+
+
+### **Editar Categoria**
+![Editando Lançamentos](https://ik.imagekit.io/f1uatti9kjv/EditandoCategorias_nivjHYcxg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109975074)
+
+
+### **Cadastro de Novo Lançamento**
+![Cadastro de lancamentos](https://ik.imagekit.io/f1uatti9kjv/Lancamentocadastro_ACiprkPAf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109752955)
+
+
+### **Cadastro de Nova Categoria**
+![alt](https://ik.imagekit.io/f1uatti9kjv/CadastroNovaCategoria_2d6w5tQu7xN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643112767821)
+
+---
