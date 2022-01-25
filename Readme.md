@@ -551,5 +551,5 @@ Build at: 2022-01-25T11:39:15.299Z - Hash: 51ea015210025736ad1c - Time: 75670ms
 ### **Cadastro de Nova Categoria**
 ![alt](https://ik.imagekit.io/f1uatti9kjv/CadastroNovaCategoria_2d6w5tQu7xN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643112767821)
 
-
+---
 
