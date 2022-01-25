@@ -494,8 +494,8 @@ Validar que cada unidade de trabalho se comporta como projetada, esperada ou pre
 
 ##  **Integração** 
 
-
-
+---
+### **Disponibilizando aplicação Angular para integração com a API.**
 ```
 C:\Users\William_Cardoso\Documents\controle-financeiro>ng serve
 Your global Angular CLI version (13.1.4) is greater than your local version (11.0.2). The local Angular CLI version is used.
@@ -524,7 +524,9 @@ Build at: 2022-01-25T11:39:15.299Z - Hash: 51ea015210025736ad1c - Time: 75670ms
 ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
 
 ```
-
+---
+### ** ✔Aplicação integrada com a API**
+---
 ### **Lista de Lançamentos**
 
 ![Lançamentos](https://ik.imagekit.io/f1uatti9kjv/lancamento_Q6jpcUJIh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109741862)
