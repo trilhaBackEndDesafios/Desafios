@@ -531,6 +531,12 @@ Build at: 2022-01-25T11:39:15.299Z - Hash: 51ea015210025736ad1c - Time: 75670ms
 
 ```
 ---
+### **Configuração das Variáveis de Ambiente**
+
+![variaveldeambiente](https://ik.imagekit.io/f1uatti9kjv/VariavelDeAmbiente_Tclm131G6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643125356576)
+
+
+---
 ### ** ✔Aplicação integrada com a API**
 ---
 ### **Lista de Lançamentos**
