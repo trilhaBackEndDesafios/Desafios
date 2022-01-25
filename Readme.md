@@ -2,6 +2,8 @@
   <img width="400" height="200" src="https://ik.imagekit.io/f1uatti9kjv/Captura_de_tela_2021-12-18_180004_4PxATMOVWfW.png?updatedAt=1639861594987">
 </p>
 
+---
+
 # 🏷Sobre
 
 ## ✔ **Desafio 1**
@@ -39,7 +41,7 @@ Permitindo também a restauração do codigo removido ou modificado.
 - [https://www.youtube.com/watch?v=UBAX-13g8OM](https://www.youtube.com/watch?v=UBAX-13g8OM)
 - [https://www.youtube.com/watch?v=xEKo29OWILE&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA](https://www.youtube.com/watch?v=xEKo29OWILE&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
 
-
+---
 ## ✔ **DESAFIO 2**
 
 #### 🏷Sobre POO
@@ -83,7 +85,7 @@ Em suma, pouco importa os detalhes do que aconteceu durante a manutenção do se
 
 - Natural: Mais facil de entender.Preocupa-se mais na funcionalidade do que nos detalhes da implementação.
 
-
+---
 ## ✔ **Desafio 3**
 
 ### 🏷 Sobre  CONTROLLER
@@ -132,7 +134,7 @@ O método PATCH é utilizado para aplicar modificações parciais em um recurso.
 O Swagger é um framework composto por diversas ferramentas que, independente da linguagem, auxilia a descrição, consumo e visualização de serviços de uma API REST. 
 No framework Swagger, existem ferramentas para os seguintes tipos de tarefas a serem realizadas para o completo desenvolvimento da API de um serviço WEB
 
-
+---
 ## ✔**Desafio 4**
 
 ### 🏷**Sobre Repository**
@@ -163,7 +165,7 @@ O SpringData é um projeto da SpringSource com proposta de unificar e facilitar 
 
 CRUD (Create, Read, Update, Delete) a qual representa as quatro principais operações com bancos de dados: Criar, Ler, Atualizar e Excluir dados.
 
-
+---
 ## ✔**Desafio 5**
 
 
@@ -189,7 +191,7 @@ CRUD (Create, Read, Update, Delete) a qual representa as quatro principais opera
  * **Service:**
 
   A camada de serviço contém a lógica de negócios. Em particular, ele contém a lógica de validação.Operação sem estado que realiza uma tarefa de negócio.
-
+---
 
 ## ✔**Desafio 6**
 
@@ -204,7 +206,7 @@ CRUD (Create, Read, Update, Delete) a qual representa as quatro principais opera
 
 Data transfer object: Objeto de Transferência de Dados, um padrão de projeto muito usado para transporte de dados em diferentes camadas do sistema .Um DTO agrupa um conjunto de propriedades de uma ou mais classes de entidades em uma classse de transferência mais simples apenas com as propriedades necessarias.
 
-
+---
 
 ## ✔**Desafio 7**
 
@@ -213,7 +215,7 @@ Data transfer object: Objeto de Transferência de Dados, um padrão de projeto m
 
 ##  **Tratamento de Dados** 
 
-
+---
 ## ✔**Desafio 8**
 
 
@@ -260,6 +262,8 @@ Concentra o tratamento de exceçãoes  que são espalhados em todos os controlle
 
 Com o tratamento de exceções pode se devolver mensagem que especificam o motivo correto do erro no caso de uso da API de maneira incorreta que o estado da aplicação não permite devolvendo status Http corretos customizando as reposta e modelando com respostas pradonizadas.
 
+--- 
+
 ## ✔**Desafio 9**
 
 ### 🏷**Sobre**
@@ -294,7 +298,7 @@ S = Classes do projeto com uma unica responsabilidade.
 O = Classes abertas para extenções e fechada para modeificações.
 D = Inversão de dependencia. 
 
-
+---
 ## ✔**Desafio 10**
 
 
@@ -403,7 +407,7 @@ o método não deve esperar nenhum parâmetro.
 
 Ex: Relatorios de um  fluxo de vendas por um determinado período, por exemplo, a cada hora, ou então, a cada dia.
 
-
+---
 
 ## ✔**Desafio 11**
 
@@ -447,7 +451,7 @@ Adicionando a dependencia no pom.xml.
 
 Primeiro adicionamos o driver mysql no pom.xml com os JARs,configurando o datasource e uma das maneiras  que é no aplication properties  com a url de conexção onde o driver JDBC MYSQL ira interpretar o codigo com uma senha e um usúario. 
 
-
+---
 ## ✔**Desafio 12**
 
 
@@ -486,6 +490,7 @@ Validar que cada unidade de trabalho se comporta como projetada, esperada ou pre
 
 - testaLancamentosDependentesEmpty_NoCotent(testes.TrilhaBackTestes) - Teste para campos vazios.
 
+<<<<<<< HEAD
 ## ✔**Desafio 13**
 
 
@@ -504,6 +509,23 @@ Validar que cada unidade de trabalho se comporta como projetada, esperada ou pre
 ```
 C:\Users\William_Cardoso\Documents\controle-financeiro>ng serve
 Your global Angular CLI version (13.1.4) is greater than your local version (11.0.2). The local Angular CLI version is used.
+=======
+--- 
+
+## ✔**Desafio 13**
+
+
+### 🏷**Sobre**
+
+
+##  **Integração** 
+
+---
+### **Disponibilizando aplicação Angular para integração com a API.**
+```
+C:\Users\William_Cardoso\Documents\controle-financeiro>ng serve
+Your global Angular CLI version (10.0.5) is greater than your local version (10.0.5). The local Angular CLI version is used.
+>>>>>>> desafio13
 
 
 √ Browser application bundle generation complete.
@@ -530,6 +552,7 @@ Build at: 2022-01-25T11:39:15.299Z - Hash: 51ea015210025736ad1c - Time: 75670ms
 
 ```
 ---
+<<<<<<< HEAD
 ### ** ✔Aplicação integrada com a API**
 
 ---
@@ -539,15 +562,35 @@ Build at: 2022-01-25T11:39:15.299Z - Hash: 51ea015210025736ad1c - Time: 75670ms
 ![Lançamentos](https://ik.imagekit.io/f1uatti9kjv/lancamento_Q6jpcUJIh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109741862)
 
 ---
+=======
+### **Configuração das Variáveis de Ambiente**
+
+![variaveldeambiente](https://ik.imagekit.io/f1uatti9kjv/VariavelDeAmbiente_Tclm131G6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643125356576)
+
+
+---
+### ** ✔Aplicação integrada com a API**
+---
+### **Lista de Lançamentos**
+
+![Lançamentos](https://ik.imagekit.io/f1uatti9kjv/lancamento_Q6jpcUJIh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109741862)
+
+
+>>>>>>> desafio13
 
 ### **Lista de Categorias**
 ![Categorias](https://ik.imagekit.io/f1uatti9kjv/Categoria_ndxvwMRxh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109711285)
 
+<<<<<<< HEAD
 ---
+=======
+
+>>>>>>> desafio13
 
 ### **Editar Lançamento**
 ![Editando Lançamentos](https://ik.imagekit.io/f1uatti9kjv/EditandoLan%C3%A7amentos_DDw73shc4Jp.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109987016)
 
+<<<<<<< HEAD
 ---
 ### **Editar Categoria**
 ![Editando Lançamentos](https://ik.imagekit.io/f1uatti9kjv/EditandoCategorias_nivjHYcxg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109975074)
@@ -561,4 +604,19 @@ Build at: 2022-01-25T11:39:15.299Z - Hash: 51ea015210025736ad1c - Time: 75670ms
 ![alt](https://ik.imagekit.io/f1uatti9kjv/CadastroNovaCategoria_2d6w5tQu7xN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643112767821)
 
 
+=======
+
+### **Editar Categoria**
+![Editando Lançamentos](https://ik.imagekit.io/f1uatti9kjv/EditandoCategorias_nivjHYcxg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109975074)
+
+
+### **Cadastro de Novo Lançamento**
+![Cadastro de lancamentos](https://ik.imagekit.io/f1uatti9kjv/Lancamentocadastro_ACiprkPAf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109752955)
+
+
+### **Cadastro de Nova Categoria**
+![alt](https://ik.imagekit.io/f1uatti9kjv/CadastroNovaCategoria_2d6w5tQu7xN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643112767821)
+
+---
+>>>>>>> desafio13
 
