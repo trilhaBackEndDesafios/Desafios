@@ -490,31 +490,11 @@ Validar que cada unidade de trabalho se comporta como projetada, esperada ou pre
 
 - testaLancamentosDependentesEmpty_NoCotent(testes.TrilhaBackTestes) - Teste para campos vazios.
 
-<<<<<<< HEAD
-## ✔**Desafio 13**
-
-
-
-### 🏷**Sobre**
-
-
-
-##  **Integração** 
-
-
-
-
-### **Disponibilizando aplicação Angular para integração com a API.**
-
-```
-C:\Users\William_Cardoso\Documents\controle-financeiro>ng serve
-Your global Angular CLI version (13.1.4) is greater than your local version (11.0.2). The local Angular CLI version is used.
-=======
 --- 
 
 ## ✔**Desafio 13**
 
-
+---
 ### 🏷**Sobre**
 
 
@@ -525,7 +505,6 @@ Your global Angular CLI version (13.1.4) is greater than your local version (11.
 ```
 C:\Users\William_Cardoso\Documents\controle-financeiro>ng serve
 Your global Angular CLI version (10.0.5) is greater than your local version (10.0.5). The local Angular CLI version is used.
->>>>>>> desafio13
 
 
 √ Browser application bundle generation complete.
@@ -552,17 +531,6 @@ Build at: 2022-01-25T11:39:15.299Z - Hash: 51ea015210025736ad1c - Time: 75670ms
 
 ```
 ---
-<<<<<<< HEAD
-### ** ✔Aplicação integrada com a API**
-
----
-
- ###  **Lista de Lançamentos**
-
-![Lançamentos](https://ik.imagekit.io/f1uatti9kjv/lancamento_Q6jpcUJIh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109741862)
-
----
-=======
 ### **Configuração das Variáveis de Ambiente**
 
 ![variaveldeambiente](https://ik.imagekit.io/f1uatti9kjv/VariavelDeAmbiente_Tclm131G6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643125356576)
@@ -576,35 +544,15 @@ Build at: 2022-01-25T11:39:15.299Z - Hash: 51ea015210025736ad1c - Time: 75670ms
 ![Lançamentos](https://ik.imagekit.io/f1uatti9kjv/lancamento_Q6jpcUJIh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109741862)
 
 
->>>>>>> desafio13
 
 ### **Lista de Categorias**
 ![Categorias](https://ik.imagekit.io/f1uatti9kjv/Categoria_ndxvwMRxh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109711285)
 
-<<<<<<< HEAD
----
-=======
 
->>>>>>> desafio13
 
 ### **Editar Lançamento**
 ![Editando Lançamentos](https://ik.imagekit.io/f1uatti9kjv/EditandoLan%C3%A7amentos_DDw73shc4Jp.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109987016)
 
-<<<<<<< HEAD
----
-### **Editar Categoria**
-![Editando Lançamentos](https://ik.imagekit.io/f1uatti9kjv/EditandoCategorias_nivjHYcxg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109975074)
-
----
-### **Cadastro de Novo Lançamento**
-![Cadastro de lancamentos](https://ik.imagekit.io/f1uatti9kjv/Lancamentocadastro_ACiprkPAf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109752955)
-
----
-### **Cadastro de Nova Categoria**
-![alt](https://ik.imagekit.io/f1uatti9kjv/CadastroNovaCategoria_2d6w5tQu7xN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643112767821)
-
-
-=======
 
 ### **Editar Categoria**
 ![Editando Lançamentos](https://ik.imagekit.io/f1uatti9kjv/EditandoCategorias_nivjHYcxg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643109975074)
@@ -618,5 +566,334 @@ Build at: 2022-01-25T11:39:15.299Z - Hash: 51ea015210025736ad1c - Time: 75670ms
 ![alt](https://ik.imagekit.io/f1uatti9kjv/CadastroNovaCategoria_2d6w5tQu7xN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643112767821)
 
 ---
->>>>>>> desafio13
+---
 
+
+## ✔**Desafio 14**
+
+---
+### 🏷**Sobre**
+
+
+##  **Final** 
+
+
+### **a) Desafio 1 - Git:**
+
+**I. Dê 2 exemplos de situações onde é necessário utilizar merge:**
+
+Quando fundimos duas branchs com a main e também quando se esta desenvolvendo projetos em equipe e precisamos fazer a fusão das branches coma as modificações de cada desenvolvedor.
+
+
+**II. Com qual objetivo realizamos o commit?**
+
+Quando trabalhando em um  projeto  precisamos guardar as alterações, e o commit salva  uma cópia no repositório local.
+
+**III. Qual a diferença entre:** 
+
+- git add -all: Insere todas as modificações dos arquivos modificados.
+- git add  -u: Prepara as mudanças realizadas nos arquivos deletados e modificados 
+- git add -A: Prepara todas as mudanças realizadas no diretório local. 
+- git add: realiza a inclusão ou modificação do arquivo no diretório local  é utilizado para sinalizar que houve interação no diretório local,mantém o histórico de todas as ações realizadas no código, permitindo que, se algum problema ocorrer na aplicação, o comando de desfazer alteração possa ser acionado.
+
+**I V.Qual  é  a  ordem  dos  comandos  para  subir  novas  atualizações,  verificando  se existem alterações a serem recebidas?**
+
+Git status.
+Git add (.,-all,-u,-A)
+Git commit.
+Git push
+ 
+**V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 1? Se não, justifique;**
+
+Sim.
+ ---
+
+### **b) Desafio 2 - POO e Entity:**
+
+**I. Qual é a finalidade da camada Entity?**
+
+Uma camada onde ficam entidades de domínio para encapsular o comportamento e as regras do domínio.
+
+**II. Para você, por que acha que seguimos a programação orientada a objetos?**
+
+Entre os motivos dessa preferência, estão a possibilidade de reutilização de código e a capacidade da representação do sistema ser muito mais próximo do que vivenciamos no mundo real.
+
+**III. Qual é o ideal por trás de utilizar os métodos getters e setters?**
+
+Para se utilizar um dos pilares da POO,o encapsulamento e  provendo acessos ao objeto somente pelos metos getters e setters.
+
+***I V. Qual o propósito de um construtor em uma classe? Podemos criar uma classe sem construtor?**
+
+Construtores são basicamente funções de inicialização de uma classe, as quais são invocadas no momento em que objetos desta classe são criadas.
+Sem um construror não seria possivel criar um objeto desta classe.
+
+
+**V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 2? Se não, justifique;**
+Sim
+
+---
+
+### **c) Desafio 3 - HTTP, REST e Controller:**
+
+**I. Qual é o objetivo da camada Controller?**
+
+O controlador serve como um intermediário que organiza os eventos da interface com usuário e os direciona para a camada de modelo, assim, torna-se possível um reaproveitamento da camada de modelo em outros sistemas já que não existe dependência entre a visualização e o modelo
+
+**II. No que os padrões REST nos auxiliam?**
+
+Para desenvolver uma aplicação no modelo arquetutural utilizando os protocolos Http adequadamente ,seguindo algumas regras(constraints).
+
+**III. Quais métodos HTTP utilizamos para montar um CRUD?**
+Get,
+Post,
+Put,
+Delete.
+
+**IV.    Qual    a    diferença    entre    as    annotations    @PathVariable, @RequestParam, @RequestBody?  E  com  quais  métodos  HTTP  elas  podem  ser  utilizadas respectivamente?**
+
+
+@PathVariable:serve para pegar um trecho da url que geralmente é dinâmico 
+@RequestParam:é utilizado para pegar uma parâmetro de query da url
+@RequestBody:corpo da requisição, é onde geralmente enviamos dados que queremos gravar no servidor.
+
+**V. Para que serve ResponseEntity?**
+
+Serve para manipular as resposta HTTP com códigos de status adequados.
+
+**VI. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 3? Se não,justifique**
+
+Sim.
+
+---
+### **d) Desafio 4 - JPA e Repository:**
+
+**I. Qual é o propósito da camada Repository?**
+
+Adicionar uma camada de abstração para acesso a dados,sem saber o mecanismo de persistencia que esta sendo utilizado.
+
+**II. De maneira prática como funciona a injeção do Repository? E qual a sua relação com @Autowired?**
+
+Com a Anotação @Repository na interface, o Spring tem um bean gerenciado e utilizamos a anotação @autowired para que o Spring injete fica a cargo do Spring uma isntancia da classe Repository. 
+
+
+**III. Quais são as facilidades em utilizar JPA?**
+
+Fornecer uma implementação em tempo de execução com uma interface com varios metodos implementados de acsso ao banco de dados.
+
+**IV. Quais são os passos para configurar um banco de dados em um projeto Spring?**
+
+Configurando o aqrquivo APPLICATION PROPERTIES passando parâmetros para o acesso ao banco de dados, a porta http que a API deverá utilizar, e diversos outros parâmetro.
+
+
+**V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 4? Se não, justifique;**
+Sim.
+
+---
+### **e) Desafio 5 - Service:**
+
+**I. Qual é a finalidade da camada Service?**
+
+Realizar uma tarefa especifica do dominio,quando um processo não é responsabilidade do dominio.
+
+**II. Qual o sentido de um método ter apenas um propósito?**
+
+O metodo so deve existir para um unico propósito uma unica tarefa evitando mais de uma responsabilidade.
+
+**III. Qual a diferença entre um método void e métodos tipados?**
+
+O método void não retorna valores e um método tipado devolve um objeto do tipo declarado.
+
+***IV. É normal um serviço chamar outro?**
+
+Sim, os services podem interagim com outros services.
+
+**V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 5? Se não, justifique;**
+Sim
+
+---
+
+### **f) Desafio 6 - DTO:**
+
+**I. Quais problemas conseguimos resolver utilizando a camada DTO?**
+
+Isolando o Domain Model do Representation Model com o padrão DTO evitando compartilhar a mesma classe.
+
+**II.  Qual  a  diferença  de  realizarmos  o  “de  para”  utilizando  constructor  ou  getters  e  setters?**
+
+Os contrutores são iniciados quando a classe é instanciada, e os getter e setters são para encapsular os dados.
+
+**III. No que a utilização do Mapper nos auxilia? Achou fácil a implementação?**
+
+ Auxilia eliminar codigos repetitivos com getters e setters e automatizando com a biblioteca Mapper para mapear os objetos em transformação em outro objeto foi façil e rapido..
+
+
+**IV. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 6? Se não, justifique.**
+Sim.
+
+---
+
+### **g) Desafio 7 - Manipulação de dados:**
+
+**I. Qual é a forma de validar os dados de uma requisição sem utilizar @Valid?**
+
+Podemos utilizar o Bean Validator.
+
+**II. Para que serve um ENUM? Cite exemplos;**
+
+São tipos de campos que consistem em um conjunto fixo de constantes, sendo como uma lista de valores pré-definidos.
+
+
+**III. Como criamos um custom validator? E qual o objetivo de criar um?**
+
+Criamos uma interface para criar uma validação coma as anotações de @Constraint,@Target,@Retention em nivel de classe.
+Usamos a criação de um custom validator primeiro por questao de semantica, para uma validação que se repete em varios lugares no código e outra se for preciso mudar alguma regra de validação fica facil a manutenção alterando somente as regras contidas na validação.
+
+**IV. Qual foi a diferença entre utilizar for e streams no desafio 6?**
+
+Teve uma redução significativa do código e a interpretação de um Stream ficou mais clara o entendimento.
+
+**V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 7? Se não, justifique;**
+Sim.
+
+---
+### **h) Desafio 8 - Tratamento de exceptions:**
+
+**I. Qual a finalidade de trata-las?**
+
+Para evitarmos um erro por  usuarios que usam a API de maneira errada ou erro que um estado da aplicação não permite, repassando um status correto e uma mensagem do erro.
+
+**II. Como as descobrimos?**
+
+Quando a aplicação recebe algum dado que a aplicação não permite.
+
+**III. Como fazemos para estourar um exception em uma determinada linha?**
+
+Lançando uma excecao no ponto desejado utilizando (throw new).
+
+**IV. Qual é a melhor forma de implementarmos nosso controle de exceções?**
+
+Utilizando uma classe, um ponto central para conter todas as execções lançadas com anotação @ControleAdvice.
+
+**V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 8? Se não, justifique;**
+Sim
+
+---
+### **i) Desafio 9 - Patterns, SOLID e Arquitetura:**
+
+**I. O que é Singleton Pattern?**
+
+Um padrão de projeto criacional, que garante que apenas um objeto desse tipo exista e forneça um único ponto de acesso a ele para qualquer outro código
+
+**II. O que significa a letra D de SOLID e como se aplica na camada de Repository?**
+
+D:Princípio de Inversão de Dependência.
+A camada Repository é uma interface sendo assim devemos depender de abstrações e não de classes concretas.
+
+**III. Qual o objetivo das camadas?**
+
+O padrão determina a organização do software,uma boa forma de organizar as responsabilidades
+
+**IV. Qual arquitetura é melhor DDD, Hexagonal ou Clean?**
+
+O Padrão DDD.
+
+**V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 9? Se não, justifique;**
+Sim.
+
+---
+
+### **j) Desafio 10 - Spring:**
+
+
+**I. Qual a diferença entre Java e Spring?**
+
+Java é uma linguagem de programação.
+Spring é um fremework para desenvolver aplicações Java com varios  projetos que facilitam o desenvolvimento.
+
+**II. É possível utilizar Spring Data sozinho?**
+
+Não.Spring Data Framework para acesso e manipulação de dados, precisa de um subprojeto que fornece um repositório genérico para sua utilização.
+
+**III. É possível utilizar Spring Boot, Spring Data e Spring Security em apenas um projeto? Se sim, como é feito a integração?** 
+
+ Sim.A integração se da com as injeções das dependencias de cada projeto.
+
+**IV. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 10? Se não, justifique**
+
+Sim
+
+---
+### **k) Desafio 11 - Libs:**
+
+**I. Cite 5 libs que utilizou durante a trilha e suas respectivas funcionalidades;**
+
+Jackson - é o formato de troca de dados de fato no desenvolvimento de software moderno.
+
+Mockito - Uma maneira de escrever o teste Unit/Integration com  operações de banco de dados, operações de E/S.
+
+Lombok - reduçao de codigos repetidos utilizando anotações paraconstrutores e getters e setters.
+
+JUnit- utilizado para testes da aplicação.
+
+ModelMapper - Utilizado para transformações de um objeto em outro evitando repetições de códigos.
+
+
+**II. Qual a diferença entre uma lib e um driver?**
+
+Ambos são biliotecas,um conjunto de classes e interfaces.
+
+**III. Existe limite de libs por projeto?**
+
+Não.
+
+**IV. Por que utilizar um gerenciador de dependências?**
+
+Para se ter um ponto central onde ficam as configurações do projeto.
+
+**V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 11? Se não, justifique;**
+Sim
+
+---
+
+### **L) Desafio 12 - Testes unitários:**
+
+**I. Por que DEVOPS exige uma porcentagem de cobertura mínima nos projetos?**
+
+Para poderem assim criar, testar e liberar software de maneira mais rápida e confiável  a metodologia devops compartilhar responsabilidade de segurança da aplicação, sendo assim a parte de desenvolvimentos e teste é imprescindível para a garantia de que o software esta em bom estado de funcionamento antes de subir a aplicação.
+
+**II. Qual o objetivo de utilizar Mockito? Dê um exemplo;**
+
+O seu principal objetivo é simular a instancia de classes e comportamento de métodos.
+Uma classe de serviço possui um método que precise acessar um BD.
+
+**III. O que é o Sonar? E qual é o seu papel?**
+
+O sonar é um projeto open source que visa justamente, avaliar a qualidade de seu código. Para isso ele avalia a arquitetura e design, número de comentários, regras do java, alto nível de complexidade, código duplicado, cobertura de testes no código, etc. Além de possuir um número bastante extenso de plugins.
+
+**IV. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 12? Se não, justifique.**
+ Sim.
+
+ ---
+
+ ### **m) Desafio 13 - Integração:**
+
+ **I. Como foi o processo de integração?**
+
+ Com as orientações no desafio e estudos voltados para o assunto não foi complicado fazer a integração .
+
+ **II. Quais foram as principais dificuldades?**
+
+  O entendimento das requisições de origens diferentes para o funcionamento da integração.
+
+ **III. Obteve algum erro de CORS?**
+
+ Sim.
+
+ **IV. O que é CORS?**
+
+Uma politica de mesma origem implemenmtadas pelos navegadores para requisições de origens diferentes.
+
+**V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 13? Se não, justifique.**
+ Sim.
+
+ ---
